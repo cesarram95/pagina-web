@@ -533,39 +533,6 @@
     object-fit: contain;
   }
 
-  @media (max-width: 768px) {
-    .modal-content img {
-      transition: transform 0.4s ease-in-out;
-    }
-    .modal-content img.swipe-out-left {
-      transform: translateX(-100%);
-    }
-    .modal-content img.swipe-out-right {
-      transform: translateX(100%);
-    }
-    .modal-content img.swipe-in-left {
-      animation: swipeInLeft 0.4s ease-in-out forwards;
-    }
-    .modal-content img.swipe-in-right {
-      animation: swipeInRight 0.4s ease-in-out forwards;
-    }
-    @keyframes swipeInLeft {
-      from {
-        transform: translateX(100%);
-      }
-      to {
-        transform: translateX(0);
-      }
-    }
-    @keyframes swipeInRight {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(0);
-      }
-    }
-  }
   .modal-content p {
     color: rgba(255, 255, 255, 0.9);
     font-family: "Libre Baskerville", serif;
@@ -922,36 +889,8 @@
   const modalCaption = document.getElementById('modalCaption');
   const modalOverlay = document.querySelector('.modal-overlay');
 
-  let isMobileSwipe = false;
-  let swipeDirection = 'left';
-
   function openModal(imageUrl, caption, copyright) {
-    // Apply swipe animation only on mobile when swiping
-    if (isMobileSwipe && window.innerWidth <= 768) {
-      modalImage.classList.remove('swipe-in-left', 'swipe-in-right', 'swipe-out-left', 'swipe-out-right');
-
-      if (swipeDirection === 'left') {
-        modalImage.classList.add('swipe-out-left');
-      } else {
-        modalImage.classList.add('swipe-out-right');
-      }
-
-      setTimeout(() => {
-        modalImage.src = imageUrl;
-        modalImage.classList.remove('swipe-out-left', 'swipe-out-right');
-
-        if (swipeDirection === 'left') {
-          modalImage.classList.add('swipe-in-left');
-        } else {
-          modalImage.classList.add('swipe-in-right');
-        }
-      }, 200);
-
-      isMobileSwipe = false;
-    } else {
-      modalImage.src = imageUrl;
-      modalImage.classList.remove('swipe-in-left', 'swipe-in-right', 'swipe-out-left', 'swipe-out-right');
-    }
+    modalImage.src = imageUrl;
 
     modalCaption.textContent = caption;
     const copyrightEl = document.getElementById('modalCopyright');
@@ -1072,35 +1011,6 @@
     });
   });
 
-  // Remove old click handlers by re-adding them
-
-  // Swipe functionality for mobile
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  function handleSwipe() {
-    if (touchEndX < touchStartX - 50) {
-      // Swiped left - go to next image
-      isMobileSwipe = true;
-      swipeDirection = 'left';
-      document.getElementById('modalNext').click();
-    }
-    if (touchEndX > touchStartX + 50) {
-      // Swiped right - go to previous image
-      isMobileSwipe = true;
-      swipeDirection = 'right';
-      document.getElementById('modalPrev').click();
-    }
-  }
-
-  modal.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, false);
-
-  modal.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  }, false);
 </script>
 
 </body>
