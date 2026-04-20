@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(gunzip -c \"webfetch-1776623623883-2mdzt9.bin\")",
+      "Bash(tar -t)",
+      "Bash(tar -xO \"cesar-artist-website/project/Gallery Landing.html\")",
+      "Bash(cat)",
+      "Bash(python /tmp/generate_works.py)",
+      "Bash(python /tmp/generate_works_formatted.py)",
+      "Bash(python C:/temp_works.py)",
+      "Bash(python3)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
