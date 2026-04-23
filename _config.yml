@@ -1,0 +1,7 @@
+title: César Augusto Ramírez
+description: Artist portfolio
+url: "https://cesaraugustoramirez.com"
+baseurl: ""
+markdown: kramdown
+plugins:
+  - jekyll-feed
