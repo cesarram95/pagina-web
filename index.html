@@ -859,9 +859,12 @@
         if (bg) {
           imgEl.style.backgroundImage = `url('${bg}')`;
           imgEl.dataset.loaded = '1';
-          const tmp = new Image();
-          tmp.onload = function() { imgEl.style.aspectRatio = this.width / this.height; };
-          tmp.src = bg;
+          // Only recalculate aspect ratio for work images, not installation views
+          if (imgEl.classList.contains('work-img')) {
+            const tmp = new Image();
+            tmp.onload = function() { imgEl.style.aspectRatio = this.width / this.height; };
+            tmp.src = bg;
+          }
         }
       });
 
