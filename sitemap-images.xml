@@ -3,14 +3,14 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Works section images -->
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/1/all1.jpg</image:loc>
       <image:title>All under heaven by César Augusto Ramírez</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/2/ciano1.jpg</image:loc>
       <image:title>Fleur de lys by César Augusto Ramírez</image:title>
@@ -57,14 +57,14 @@
     </image:image>
   </url>
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/3/the1.jpg</image:loc>
       <image:title>The breath by César Augusto Ramírez</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/4/trans1.jpg</image:loc>
       <image:title>Transience by César Augusto Ramírez</image:title>
@@ -95,7 +95,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/5/ens1.jpg</image:loc>
       <image:title>Ensemble by César Augusto Ramírez</image:title>
@@ -106,7 +106,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/6/adios1.JPG</image:loc>
       <image:title>Adiós by César Augusto Ramírez</image:title>
@@ -125,7 +125,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/7/fan1.jpg</image:loc>
       <image:title>Fan by César Augusto Ramírez</image:title>
@@ -152,7 +152,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://cesaraugustoramirez.com#works</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/8/nunca1.jpg</image:loc>
       <image:title>Nunca más by César Augusto Ramírez</image:title>
@@ -160,7 +160,7 @@
   </url>
   <!-- Installation Views images -->
   <url>
-    <loc>https://cesaraugustoramirez.com#installations</loc>
+    <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/INSTALLATION%20VIEWS/in1.jpg</image:loc>
       <image:title>Installation Views by César Augusto Ramírez</image:title>
