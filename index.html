@@ -396,6 +396,26 @@
     border-bottom: 1px solid var(--ink); padding-bottom: 2px;
   }
 
+  /* ─── Press section ───────────────────────────── */
+  .press-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 0 40px;
+  }
+  .press-list a {
+    font-size: 14px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color .25s ease, color .25s ease;
+  }
+  .press-list a:hover {
+    border-bottom-color: var(--ink);
+    color: var(--ink-2);
+  }
+
   /* ─── CV Section ──────────────────────────────── */
   #cv > .more {
     font-family: "Libre Baskerville", serif !important;
@@ -639,6 +659,7 @@
     <a href="#installations">Installation Views</a>
     <a href="#cv">CV</a>
     <a href="#about">Bio</a>
+    <a href="#press">Press</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -814,6 +835,24 @@
         <p>His work has been included in exhibitions <em>Videoakt International Biennial of Art of New Media</em>, Museum of Contemporary Art of Lima (2026); <em>At hand</em> and <em>Entrez sans sonner</em>, Galerie du Crous de Paris (2025 and 2026); <em>Prix Michel Journiac</em> (2025); <em>Avatar reveal</em>, Linda Gallery Centro de Arte (2025); <em>ICPNA Contemporary Art Prize</em> (2023 and 2022); <em>Independencia: Cusco Art Biennial</em> (2021); <em>New Peruvian Photography</em>, MATE Museum (2019); among others.</p>
         <p>The artist lives and works between France and Peru.</p>
       </div>
+    </section>
+
+    <section class="section" id="press">
+      <div class="section-head">
+        <h2>Press</h2>
+      </div>
+      <div class="press-list">
+        <a href="https://artfacts.net/artist/cesar-augusto-ramirez" target="_blank" rel="noopener">artfacts.net — César Augusto Ramírez</a>
+        <a href="https://www.cnap.fr/annuaire/personne/cesar-augusto-ramirez" target="_blank" rel="noopener">CNAP — Centre National des Arts Plastiques</a>
+        <a href="https://bienaldecusco.art/cesar-augusto-ramirez-siete-ensayos-de-reinterpretacion-de-la-realidad-peruana/" target="_blank" rel="noopener">Bienal de Cusco — Siete ensayos de reinterpretación de la realidad peruana</a>
+        <a href="https://www.vocablodelarte.com/blog/categories/cesar-augusto-ramirez" target="_blank" rel="noopener">Vocablo del Arte — César Augusto Ramírez</a>
+        <a href="https://dearteenlinea.com/artistas/cesar-augusto-ramirez/" target="_blank" rel="noopener">De Arte en Línea — César Augusto Ramírez</a>
+        <a href="https://www.arteinformado.com/galeria/cesar-augusto-ramirez/all-under-heaven-77507" target="_blank" rel="noopener">Arte Informado — All under heaven</a>
+        <a href="https://latexmagazine.com/la-fotografia-interpersonal-e-intima-de-cesar-augusto-ramirez/" target="_blank" rel="noopener">Latex Magazine — La fotografía interpersonal e íntima de César Augusto Ramírez</a>
+        <a href="https://revistas.upc.edu.pe/index.php/fot/article/view/1991" target="_blank" rel="noopener">Revista UPC — Fotografía</a>
+        <a href="https://jcmagazine.com/cesar-augusto-ramirez-presenta-exposicion-mapa-a-las-estrellas/" target="_blank" rel="noopener">JC Magazine — Cesar Augusto Ramírez presenta exposición Mapa a las Estrellas</a>
+      </div>
+    </section>
 
     <section class="section" id="contact">
       <div class="section-head">
@@ -846,7 +885,7 @@
 </main>
 
 <script>
-  const sections = ['works', 'installations', 'cv', 'about', 'contact'].map(id => document.getElementById(id));
+  const sections = ['works', 'installations', 'cv', 'about', 'press', 'contact'].map(id => document.getElementById(id));
   const links = document.querySelectorAll('.sidebar nav a');
 
   function onScroll() {
