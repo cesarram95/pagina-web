@@ -116,6 +116,9 @@
     position: relative;
     border-bottom: 1px solid transparent;
     transition: border-color .25s ease, padding-left .25s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
   }
   .sidebar nav a:hover { padding-left: 20px; border-bottom-color: var(--ink-3); }
   .sidebar nav a.active { }
@@ -938,28 +941,14 @@
     const href = a.getAttribute('href');
     if (href && href.startsWith('#')) {
       e.preventDefault();
-      // Disable all nav links during scroll to prevent multiple triggers
-      links.forEach(link => link.style.pointerEvents = 'none');
       const el = document.querySelector(href);
       if (!el) return;
 
-      // Start scroll immediately
-      const startY = window.scrollY;
-      const startTime = performance.now();
-      const duration = 600;
-      const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+      // Use native smooth scroll - faster and simpler on mobile
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-      function step(now) {
-        const progress = Math.min((now - startTime) / duration, 1);
-        const targetY = el.offsetTop - 40;
-        window.scrollTo(0, startY + (targetY - startY) * ease(progress));
-        if (progress < 1) requestAnimationFrame(step);
-        else links.forEach(link => link.style.pointerEvents = 'auto');
-      }
-      requestAnimationFrame(step);
-
-      // Load images in background without blocking scroll
-      const loadImages = () => {
+      // Load images in background without blocking
+      setTimeout(() => {
         document.querySelectorAll('[data-bg]').forEach(imgEl => {
           if (imgEl.dataset.loaded) return;
           const bg = imgEl.dataset.bg;
@@ -973,12 +962,7 @@
             }
           }
         });
-      };
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadImages);
-      } else {
-        setTimeout(loadImages, 0);
-      }
+      }, 0);
     }
   }));
 
