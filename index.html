@@ -938,6 +938,8 @@
     const href = a.getAttribute('href');
     if (href && href.startsWith('#')) {
       e.preventDefault();
+      // Disable all nav links during scroll to prevent multiple triggers
+      links.forEach(link => link.style.pointerEvents = 'none');
       const el = document.querySelector(href);
       if (!el) return;
 
@@ -952,6 +954,7 @@
         const targetY = el.offsetTop - 40;
         window.scrollTo(0, startY + (targetY - startY) * ease(progress));
         if (progress < 1) requestAnimationFrame(step);
+        else links.forEach(link => link.style.pointerEvents = 'auto');
       }
       requestAnimationFrame(step);
 
