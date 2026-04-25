@@ -941,23 +941,7 @@
       const el = document.querySelector(href);
       if (!el) return;
 
-      // Force all lazy images to start loading so heights settle
-      document.querySelectorAll('[data-bg]').forEach(imgEl => {
-        if (imgEl.dataset.loaded) return;
-        const bg = imgEl.dataset.bg;
-        if (bg) {
-          imgEl.style.backgroundImage = `url('${bg}')`;
-          imgEl.dataset.loaded = '1';
-          // Only recalculate aspect ratio for work images, not installation views
-          if (imgEl.classList.contains('work-img')) {
-            const tmp = new Image();
-            tmp.onload = function() { imgEl.style.aspectRatio = this.width / this.height; };
-            tmp.src = bg;
-          }
-        }
-      });
-
-      // Custom smooth scroll that re-calculates the target each frame
+      // Start scroll immediately
       const startY = window.scrollY;
       const startTime = performance.now();
       const duration = 600;
@@ -970,6 +954,28 @@
         if (progress < 1) requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
+
+      // Load images in background without blocking scroll
+      const loadImages = () => {
+        document.querySelectorAll('[data-bg]').forEach(imgEl => {
+          if (imgEl.dataset.loaded) return;
+          const bg = imgEl.dataset.bg;
+          if (bg) {
+            imgEl.style.backgroundImage = `url('${bg}')`;
+            imgEl.dataset.loaded = '1';
+            if (imgEl.classList.contains('work-img')) {
+              const tmp = new Image();
+              tmp.onload = function() { imgEl.style.aspectRatio = this.width / this.height; };
+              tmp.src = bg;
+            }
+          }
+        });
+      };
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadImages);
+      } else {
+        setTimeout(loadImages, 0);
+      }
     }
   }));
 
