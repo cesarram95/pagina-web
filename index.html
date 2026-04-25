@@ -116,9 +116,6 @@
     position: relative;
     border-bottom: 1px solid transparent;
     transition: border-color .25s ease, padding-left .25s ease;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
   }
   .sidebar nav a:hover { padding-left: 20px; border-bottom-color: var(--ink-3); }
   .sidebar nav a.active { }
@@ -945,25 +942,35 @@
       const el = document.querySelector(href);
       if (!el) return;
 
-      // Use native smooth scroll - faster and simpler on mobile
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      // Load images in background without blocking
-      setTimeout(() => {
-        document.querySelectorAll('[data-bg]').forEach(imgEl => {
-          if (imgEl.dataset.loaded) return;
-          const bg = imgEl.dataset.bg;
-          if (bg) {
-            imgEl.style.backgroundImage = `url('${bg}')`;
-            imgEl.dataset.loaded = '1';
-            if (imgEl.classList.contains('work-img')) {
-              const tmp = new Image();
-              tmp.onload = function() { imgEl.style.aspectRatio = this.width / this.height; };
-              tmp.src = bg;
-            }
+      // Force all lazy images to start loading so heights settle
+      document.querySelectorAll('[data-bg]').forEach(imgEl => {
+        if (imgEl.dataset.loaded) return;
+        const bg = imgEl.dataset.bg;
+        if (bg) {
+          imgEl.style.backgroundImage = `url('${bg}')`;
+          imgEl.dataset.loaded = '1';
+          // Only recalculate aspect ratio for work images, not installation views
+          if (imgEl.classList.contains('work-img')) {
+            const tmp = new Image();
+            tmp.onload = function() { imgEl.style.aspectRatio = this.width / this.height; };
+            tmp.src = bg;
           }
-        });
-      }, 0);
+        }
+      });
+
+      // Custom smooth scroll that re-calculates the target each frame
+      const startY = window.scrollY;
+      const startTime = performance.now();
+      const duration = 600;
+      const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const targetY = el.offsetTop - 40;
+        window.scrollTo(0, startY + (targetY - startY) * ease(progress));
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
     }
   }));
 
