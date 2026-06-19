@@ -51,6 +51,20 @@
     "https://www.arteinformado.com/galeria/cesar-augusto-ramirez"
   ]
 }
+  // Fix aspect ratio for portrait images
+  ['ciano6', 'ciano9', 'ciano7', 'ciano8'].forEach(function(name) {
+    var img = document.querySelector('.work-img img[src*="' + name + '"]');
+    if (!img) return;
+    function applyRatio() {
+      if (img.naturalWidth && img.naturalHeight) {
+        img.closest('.work-img').style.aspectRatio = img.naturalWidth + '/' + img.naturalHeight;
+      }
+    }
+    if (img.complete && img.naturalWidth) applyRatio();
+    else img.addEventListener('load', applyRatio);
+  });
+
+
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
