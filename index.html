@@ -285,13 +285,14 @@
     grid-row: span 2;
   }
   .work-img {
-    width: 100%;
+    width: 100%; aspect-ratio: 4/3;
     background: var(--paper);
     overflow: hidden; position: relative;
     transition: transform .5s ease;
   }
   .work-img img {
-    width: 100%; height: auto;
+    width: 100%; height: 100%;
+    object-fit: contain;
     display: block;
   }
   .work:hover .work-img { transform: translateY(-4px); }
