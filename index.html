@@ -51,16 +51,6 @@
     "https://www.arteinformado.com/galeria/cesar-augusto-ramirez"
   ]
 }
-  // Adjust container aspect ratio to match each image's natural dimensions
-  document.querySelectorAll('.work-img img').forEach(function(img) {
-    function applyRatio() {
-      if (img.naturalWidth && img.naturalHeight) {
-        img.closest('.work-img').style.aspectRatio = img.naturalWidth + '/' + img.naturalHeight;
-      }
-    }
-    if (img.complete && img.naturalWidth) applyRatio();
-    else img.addEventListener('load', applyRatio);
-  });
 
 
 </script>
@@ -297,14 +287,13 @@
     grid-row: span 2;
   }
   .work-img {
-    width: 100%; aspect-ratio: 4/3;
+    width: 100%;
     background: var(--paper);
     overflow: hidden; position: relative;
     transition: transform .5s ease;
   }
   .work-img img {
-    width: 100%; height: 100%;
-    object-fit: contain;
+    width: 100%; height: auto;
     display: block;
   }
   .work:hover .work-img { transform: translateY(-4px); }
