@@ -419,6 +419,14 @@
     letter-spacing: 0.16em; text-transform: uppercase;
   }
 
+  .bio-wrap { display: flex; gap: 48px; align-items: flex-start; }
+  .bio-text { flex: 1 1 auto; }
+  .bio-photo { flex: 0 0 240px; }
+  .bio-photo img { width: 100%; height: auto; display: block; }
+  @media (max-width: 700px) {
+    .bio-wrap { flex-direction: column; }
+    .bio-photo { flex: 0 0 auto; max-width: 240px; }
+  }
   .bio p { margin: 0 0 18px; max-width: 46ch; text-align: justify; }
   .bio .signature {
     font-family: "Libre Baskerville", serif;
@@ -1297,10 +1305,13 @@
 <div class="section-head">
 <h2>Bio</h2>
 </div>
-<div class="bio">
+<div class="bio-wrap">
+<div class="bio-text bio">
 <p>César Augusto Ramírez is a Peruvian artist based in France since 2022. His work sits at the intersection of the physical and the digital, where he interrogates the political tensions between images and the technologies that generate them. Through photography, installation, video, sculpture, and even fanzines, Ramírez questions the image itself as a narrative tool, its potential and limits as a visual medium, as well as its capacity to represent and reshape reality.</p>
 <p>His early childhood in the Peruvian jungle greatly influenced his current practice around constructed nature and visual imaginaries.</p>
 <p>Ramírez was recently selected to join the 2027 class of Villa Albertine in the United States. As part of this program, he will undertake an artist residency in New York in April and May 2027</p>
+</div>
+<div class="bio-photo"><img src="images/portrait.jpg" alt="Portrait of César Augusto Ramírez"></div>
 </div>
 </section>
 <section class="section" id="press">
