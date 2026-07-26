@@ -4,6 +4,10 @@
   <url>
     <loc>https://cesaraugustoramirez.com/</loc>
     <image:image>
+      <image:loc>https://cesaraugustoramirez.com/images/portrait.jpg</image:loc>
+      <image:title>Portrait of César Augusto Ramírez</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://cesaraugustoramirez.com/images/1/all1.jpg</image:loc>
       <image:title>All under heaven by César Augusto Ramírez</image:title>
     </image:image>
