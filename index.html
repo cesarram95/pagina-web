@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -7,8 +6,13 @@
 <meta content="Peruvian contemporary artist based in Paris. Photography, ecology, digital technology." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="g7O-bu9L3hReua57-DhyBHz_PB6sTBsGruDJZBVtHHI" name="google-site-verification"/>
-<link href="https://cesaraugustoramirez.com" rel="canonical"/>
+<link href="https://cesaraugustoramirez.com/" rel="canonical"/>
 <link href="https://cesaraugustoramirez.com/sitemap-images.xml" rel="sitemap" type="application/xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/styles.css" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,653 +54,7 @@
     "https://www.arteinformado.com/galeria/cesar-augusto-ramirez"
   ]
 }
-
-
 </script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
-<style>
-  :root {
-    --ink: #111;
-    --ink-2: #555;
-    --ink-3: #8a8a85;
-    --paper: #fbfaf7;
-    --paper-2: #f4f2ec;
-    --line: #e6e4df;
-    --sidebar-w: 260px;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
-  body {
-    font-family: "Inter", -apple-system, system-ui, sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
-  .serif { font-family: "Libre Baskerville", Georgia, serif; }
-
-  /* ─── Fixed left sidebar ─────────────────────── */
-  aside.sidebar {
-    position: fixed;
-    top: 0; left: 0; bottom: 0;
-    width: var(--sidebar-w);
-    padding: 40px 32px 32px;
-    border-right: 1px solid var(--line);
-    background: var(--paper);
-    display: flex;
-    flex-direction: column;
-    z-index: 20;
-  }
-  .brand {
-    font-family: "Libre Baskerville", serif;
-    font-size: 17px; letter-spacing: 0.005em;
-    font-weight: 400;
-    line-height: 1.25;
-  }
-  .brand em {
-    display: block; font-style: italic;
-    font-size: 11px; color: var(--ink-2);
-    margin-top: 6px; letter-spacing: 0.04em;
-    font-family: "Inter", sans-serif;
-  }
-
-  .sidebar nav {
-    margin-top: 56px;
-    display: flex; flex-direction: column;
-    gap: 2px;
-  }
-  .sidebar nav a {
-    display: inline-block;
-    font-family: "Libre Baskerville", Georgia, serif;
-    font-style: italic;
-    font-size: 16px;
-    color: var(--ink);
-    text-decoration: none;
-    padding: 10px 0 8px 0;
-    position: relative;
-    border-bottom: 1px solid transparent;
-    transition: border-color .25s ease, padding-left .25s ease;
-  }
-  .sidebar nav a:hover { padding-left: 20px; border-bottom-color: var(--ink-3); }
-  .sidebar nav a.active { }
-
-  .sidebar .rule {
-    height: 1px; background: var(--line);
-    margin: 32px 0 20px;
-  }
-
-  .sidebar .now {
-    font-size: 10px; letter-spacing: 0.22em;
-    color: var(--ink-3); text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .sidebar .now-title {
-    font-family: "Libre Baskerville", serif;
-    font-style: italic; font-size: 14px;
-    margin-bottom: 4px;
-  }
-  .sidebar .now-venue {
-    font-size: 12px; color: var(--ink-2);
-    line-height: 1.4;
-  }
-  .sidebar .now-dot {
-    display: inline-block;
-    width: 6px; height: 6px;
-    background: #c24c1e; border-radius: 50%;
-    margin-right: 8px; vertical-align: middle;
-    animation: pulse 2.4s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  .sidebar .foot {
-    margin-top: auto;
-    display: flex; justify-content: space-between;
-    align-items: center;
-    padding-top: 24px;
-  }
-  .sidebar .foot .lang {
-    font-size: 11px; color: var(--ink-3);
-    letter-spacing: 0.1em; text-transform: uppercase;
-  }
-  .sidebar .foot .lang a { color: var(--ink-3); text-decoration: none; padding: 0 2px; }
-  .sidebar .foot .lang a.on { color: var(--ink); }
-  .sidebar .ig {
-    color: var(--ink);
-    display: inline-flex; align-items: center;
-    justify-content: center;
-    width: 32px; height: 32px;
-    border: 1px solid var(--line);
-    border-radius: 50%;
-    transition: background .2s, color .2s, border-color .2s;
-    margin-top: 48px;
-  }
-  .sidebar .ig:hover {
-    background: var(--ink); color: var(--paper);
-    border-color: var(--ink);
-  }
-  .sidebar .ig svg { width: 15px; height: 15px; }
-
-  /* ─── Main scrolling column ──────────────────── */
-  main {
-    margin-left: var(--sidebar-w);
-    min-height: 100vh;
-  }
-  .wrap { padding: 48px 64px 96px; max-width: 1400px; }
-
-  /* Eyebrow above the featured piece */
-  .hero-eyebrow {
-    display: flex; align-items: baseline; gap: 14px;
-    font-size: 11px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--ink-2);
-    margin-bottom: 28px;
-  }
-  .hero-eyebrow .dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: #c24c1e; display: inline-block;
-    animation: pulse 2.4s ease-in-out infinite;
-  }
-
-  /* Featured image */
-  .featured-img {
-    width: 100%; aspect-ratio: 16 / 9;
-    background: #d6d2c9;
-    background-image:
-      linear-gradient(135deg, rgba(0,0,0,0.12) 0%, transparent 55%),
-      radial-gradient(ellipse at 30% 60%, #b8b0a0 0%, #d6d2c9 60%),
-      repeating-linear-gradient(92deg, rgba(0,0,0,0.015) 0 3px, transparent 3px 9px);
-    position: relative; overflow: hidden;
-  }
-  .featured-img::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.08) 100%);
-  }
-  .featured-img .placeholder-note {
-    position: absolute; left: 24px; top: 24px;
-    color: rgba(255,255,255,0.8);
-    font-size: 10px; letter-spacing: 0.2em;
-    text-transform: uppercase;
-    mix-blend-mode: difference;
-  }
-  .featured-caption {
-    display: grid;
-    grid-template-columns: 1fr 1fr auto;
-    gap: 48px;
-    padding-top: 20px;
-    font-size: 12px; color: var(--ink-2);
-    letter-spacing: 0.04em;
-  }
-  .featured-caption .title {
-    color: var(--ink); font-family: "Libre Baskerville", serif;
-    font-size: 14px; font-style: italic;
-  }
-  .featured-caption a {
-    color: var(--ink); text-decoration: none;
-    border-bottom: 1px solid var(--ink); padding-bottom: 1px;
-    letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px;
-    justify-self: end;
-  }
-
-  /* ─── Section headers ──────────────────────────── */
-  .section { padding-top: 96px; }
-  .section-head {
-    display: flex; align-items: baseline;
-    justify-content: space-between;
-    padding-bottom: 24px; margin-bottom: 40px;
-    border-bottom: 1px solid var(--line);
-  }
-  .section-head h2 {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400; font-style: italic;
-    font-size: 30px; margin: 0;
-    letter-spacing: -0.005em;
-  }
-  .section-head .num {
-    font-size: 10px; letter-spacing: 0.25em;
-    color: var(--ink-2); text-transform: uppercase;
-  }
-  .section-head .more {
-    font-size: 11px; letter-spacing: 0.14em;
-    text-transform: uppercase; color: var(--ink);
-    text-decoration: none;
-  }
-  .section-head .more:hover { color: var(--ink-2); }
-
-  /* ─── Works grid ───────────────────────────────── */
-  .works {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-  .work {
-    cursor: pointer;
-  }
-  .work.size-2x2 {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  .work.size-2x1 {
-    grid-column: span 2;
-  }
-  .work.size-1x2 {
-    grid-row: span 2;
-  }
-  .work-img {
-    width: 100%; aspect-ratio: 4/3;
-    background: var(--paper);
-    overflow: hidden; position: relative;
-    transition: transform .5s ease;
-  }
-  .work-img img {
-    width: 100%; height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-  .work:hover .work-img { transform: translateY(-4px); }
-  .work-img.landscape { aspect-ratio: 5/4; }
-  .work-img::before {
-    content: ""; position: absolute; inset: 0;
-    background-image:
-      radial-gradient(ellipse at var(--px, 40%) var(--py, 60%), var(--c1, #cfcac0) 0%, var(--c2, #e5e2db) 70%),
-      repeating-linear-gradient(var(--ang, 135deg), rgba(0,0,0,0.02) 0 2px, transparent 2px 7px);
-    opacity: 0;
-  }
-  .work:nth-child(1) .work-img { --c1: #8a7a68; --c2: #c9bfa9; --px: 30%; --py: 40%; --ang: 160deg; }
-  .work:nth-child(2) .work-img { --c1: #adb5b2; --c2: #e3e5e1; --px: 60%; --py: 55%; --ang: 120deg; }
-  .work:nth-child(3) .work-img { --c1: #6e5b46; --c2: #a08a6c; --px: 45%; --py: 65%; --ang: 100deg; }
-  .work:nth-child(4) .work-img { --c1: #3c3831; --c2: #7a7265; --px: 50%; --py: 50%; --ang: 140deg; }
-  .work:nth-child(5) .work-img { --c1: #b89482; --c2: #e0c9bc; --px: 35%; --py: 45%; --ang: 110deg; }
-  .work:nth-child(6) .work-img { --c1: #687866; --c2: #b2bfae; --px: 55%; --py: 60%; --ang: 150deg; }
-
-  .work-meta {
-    padding-top: 14px;
-    display: block;
-    font-size: 12px;
-    line-height: 1.55;
-    color: var(--ink-2);
-    letter-spacing: 0.02em;
-  }
-  .work-meta .artist {
-    color: var(--ink);
-    font-family: "Inter", sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.02em;
-  }
-  .work-meta .title-line {
-    font-family: "Libre Baskerville", serif;
-    color: var(--ink);
-    font-size: 14px;
-    margin-top: 2px;
-  }
-  .work-meta .title-line em {
-    font-style: italic;
-  }
-  .work-meta .medium,
-  .work-meta .dims {
-    display: block;
-  }
-
-  /* ─── Installation views strip ─────────────────── */
-  .install-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 16px;
-  }
-  .install-item {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    cursor: pointer;
-  }
-  .install-item:hover .install-img {
-    transform: translateY(-4px);
-  }
-  .install-grid .install-img {
-    aspect-ratio: 4/3;
-    position: relative; overflow: hidden;
-    background: #d4cfc5;
-    transition: transform .5s ease;
-  }
-  .install-grid .install-img img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .install-grid .install-img::before {
-    content: ""; position: absolute; inset: 0;
-    background-image:
-      radial-gradient(ellipse at var(--px, 40%) var(--py, 60%), var(--c1) 0%, var(--c2) 70%);
-    opacity: 0;
-  }
-  .install-grid .cap {
-    font-family: "Libre Baskerville", serif;
-    font-size: 13px;
-    color: var(--ink);
-    font-style: italic;
-  }
-  .install-grid .install-img:nth-child(1) { --c1: #4a4238; --c2: #8a8075; }
-  .install-grid .install-img:nth-child(2) { --c1: #bfb2a0; --c2: #e8dfcc; }
-  .install-grid .install-img:nth-child(3) { --c1: #5f6a62; --c2: #a4aea6; }
-  .install-grid .install-img:nth-child(4) { --c1: #7a6e5e; --c2: #c0b8aa; }
-  .install-grid .install-img:nth-child(5) { --c1: #3d4a48; --c2: #7a8c88; }
-  .install-grid .install-img:nth-child(6) { --c1: #6b5c4a; --c2: #b0a08e; }
-  .install-grid .install-img:nth-child(7) { --c1: #505860; --c2: #929ea8; }
-
-  /* ─── CV list ──────────────────────────────────── */
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-  }
-  .exhib-list { margin: 0; padding: 0; list-style: none; }
-  .exhib-list li {
-    display: grid;
-    grid-template-columns: 56px 1fr auto;
-    gap: 20px;
-    padding: 16px 0;
-    border-top: 1px solid var(--line);
-    align-items: baseline;
-  }
-  .exhib-list li:last-child { border-bottom: 1px solid var(--line); }
-  .exhib-list .year { font-size: 12px; color: var(--ink-2); letter-spacing: 0.06em; }
-  .exhib-list .title {
-    font-family: "Libre Baskerville", serif;
-    font-style: italic; font-size: 15px;
-  }
-  .exhib-list .venue {
-    display: block; font-family: "Inter", sans-serif;
-    font-style: normal; font-size: 12px;
-    color: var(--ink-2); margin-top: 4px;
-    letter-spacing: 0.02em;
-  }
-  .exhib-list .tag {
-    font-size: 10px; color: var(--ink-2);
-    letter-spacing: 0.16em; text-transform: uppercase;
-  }
-
-  .bio-wrap { display: flex; gap: 48px; align-items: flex-start; }
-  .bio-text { flex: 0 1 46ch; }
-  .bio-photo { flex: 0 0 240px; }
-  .bio-photo img { width: 100%; height: auto; display: block; }
-  .bio-photo .credit {
-    display: block; text-align: right;
-    font-family: "Libre Baskerville", serif;
-    font-style: italic; font-size: 9px;
-    color: var(--ink-2); margin-top: 6px;
-  }
-  @media (max-width: 700px) {
-    .bio-wrap { flex-direction: column; }
-    .bio-photo { flex: 0 0 auto; max-width: 240px; }
-  }
-  .bio p { margin: 0 0 18px; max-width: 46ch; text-align: justify; font-family: "Libre Baskerville", Georgia, serif; }
-  .bio .signature {
-    font-family: "Libre Baskerville", serif;
-    font-style: italic; font-size: 13px;
-    color: var(--ink-2); margin-top: 24px;
-  }
-  .bio a.cv-link {
-    display: inline-block; margin-top: 20px;
-    font-size: 11px; letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink); text-decoration: none;
-    border-bottom: 1px solid var(--ink); padding-bottom: 2px;
-  }
-
-  /* ─── Press section ───────────────────────────── */
-  .press-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 8px 0 40px;
-  }
-  .press-list a {
-    font-size: 14px;
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 2px;
-    transition: border-color .25s ease, color .25s ease;
-  }
-  .press-list a:hover {
-    border-bottom-color: var(--ink);
-    color: var(--ink-2);
-  }
-
-  /* ─── CV Section ──────────────────────────────── */
-  #cv > .more {
-    font-family: "Libre Baskerville", serif !important;
-    font-style: italic;
-    font-size: 16px;
-    text-decoration: underline;
-    color: var(--ink);
-  }
-  .cv-subtitle {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400; font-style: italic;
-    font-size: 20px; margin: 0 0 16px;
-    color: var(--ink);
-    padding-top: 12px;
-  }
-  .cv-subsection { margin-bottom: 16px; }
-  .cv-bio { max-width: 600px; margin-top: 64px; }
-
-  /* ─── Contact section ─────────────────────────── */
-  .contact-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    padding: 8px 0 40px;
-  }
-  .contact-block h3 {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400; font-size: 26px;
-    margin: 0 0 12px;
-  }
-  .contact-block p { color: var(--ink-2); margin: 0 0 20px; max-width: 42ch; }
-  .contact-block a.big-mail {
-    display: inline-block;
-    font-family: "Libre Baskerville", serif;
-    font-style: italic; font-size: 22px;
-    color: var(--ink); text-decoration: none;
-    border-bottom: 1px solid var(--ink); padding-bottom: 4px;
-  }
-  .contact-block .col h4 {
-    font-size: 10px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--ink-2);
-    margin: 0 0 14px; font-weight: 500;
-  }
-  .contact-block .col a {
-    display: block; color: var(--ink);
-    text-decoration: none; padding: 3px 0; font-size: 13px;
-  }
-  .contact-block .col a:hover { color: var(--ink-2); }
-
-  /* ─── Footer tiny ─────────────────────────────── */
-  .colofon {
-    margin-top: 80px; padding-top: 28px;
-    border-top: 1px solid var(--line);
-    display: flex; justify-content: space-between;
-    font-size: 11px; color: var(--ink-3);
-    letter-spacing: 0.06em;
-  }
-
-  /* ─── Responsive ──────────────────────────────── */
-  @media (max-width: 900px) {
-    aside.sidebar {
-      position: relative;
-      width: 100%; height: auto;
-      padding: 24px;
-      border-right: 0; border-bottom: 1px solid var(--line);
-    }
-    .sidebar nav {
-      flex-direction: row; flex-wrap: wrap;
-      gap: 4px 14px; margin-top: 24px;
-      padding-right: 24px;
-    }
-    .sidebar nav a { padding: 6px 4px; font-size: 15px; }
-    .sidebar .rule, .sidebar .now { display: none; }
-    .sidebar .foot {
-      padding-top: 12px;
-      justify-content: center;
-      margin-top: 0;
-    }
-    .sidebar .ig {
-      margin-top: 0;
-    }
-    main { margin-left: 0; }
-    .wrap { padding: 24px; }
-    .section-head { border-bottom: none; }
-    .works {
-      display: flex !important;
-      grid-template-columns: unset !important;
-      gap: 24px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 12px;
-    }
-    .work {
-      flex: 0 0 80%;
-      scroll-snap-align: start;
-    }
-    .install-grid {
-      display: flex !important;
-      grid-template-columns: unset !important;
-      gap: 24px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 12px;
-    }
-    .install-grid .install-item {
-      flex: 0 0 85%;
-      scroll-snap-align: start;
-    }
-    .install-grid .install-img {
-      width: 100%;
-    }
-    .two-col, .contact-block { grid-template-columns: 1fr !important; gap: 24px; }
-    .featured-caption { grid-template-columns: 1fr; gap: 8px; }
-  }
-
-  /* ─── Modal lightbox ─────────────────────── */
-  .modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  .modal.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .modal-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.9);
-  }
-  .modal-content {
-    position: relative;
-    z-index: 1000;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .modal-content img {
-    max-width: 100%;
-    max-height: 75vh;
-    object-fit: contain;
-  }
-
-  .modal-content p {
-    color: rgba(255, 255, 255, 0.9);
-    font-family: "Libre Baskerville", serif;
-    font-size: 16px;
-    text-align: center;
-    margin: 0;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-  #modalCopyright {
-    font-size: 11px !important;
-    color: rgba(255, 255, 255, 0.6) !important;
-    margin-top: 12px !important;
-    white-space: normal !important;
-  }
-  .modal-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.8);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s;
-  }
-  .modal-close:hover {
-    color: rgba(255, 255, 255, 1);
-  }
-  .modal-nav {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.5);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s;
-    letter-spacing: 2px;
-    z-index: 1001;
-  }
-  .modal-nav:hover {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  .modal-nav.disabled {
-    color: rgba(255, 255, 255, 0.15);
-    cursor: not-allowed;
-  }
-  .modal-nav.disabled:hover {
-    color: rgba(255, 255, 255, 0.15);
-  }
-  .modal-nav-prev {
-    left: 60px;
-  }
-  .modal-nav-next {
-    right: 60px;
-  }
-
-  @media (max-width: 768px) {
-    .modal-nav {
-      display: none;
-    }
-  }
-</style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -1130,19 +488,20 @@
       "size": "120 × 120 cm"
     }
   ]
-}</script></head>
+}</script>
+</head>
 <body>
 <aside class="sidebar">
 <div class="brand" style="font-size: 35px">
     César Augusto<br/>Ramírez
   </div>
 <nav>
-<a class="active" href="#works">Works</a>
-<a href="#installations">Installation Views</a>
-<a href="#cv">CV</a>
-<a href="#about">Bio</a>
-<a href="#press">Press</a>
-<a href="#contact">Contact</a>
+<a class="active" href="/">Works</a>
+<a href="/installations/">Installation Views</a>
+<a href="/cv/">CV</a>
+<a href="/bio/">Bio</a>
+<a href="/press/">Press</a>
+<a href="/contact/">Contact</a>
 </nav>
 <a aria-label="Instagram" class="ig" href="https://www.instagram.com/cesar.aug.ram/" rel="noopener" target="_blank">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24">
@@ -1156,208 +515,52 @@
 <main>
 <div class="wrap">
 <h1 style="position: absolute; left: -9999px;">César Augusto Ramírez - Contemporary Artist</h1>
-<section class="section" id="works" style="padding-top:0">
+<section class="section" id="intro" style="padding-top:0">
+<div class="bio" style="max-width:46ch">
+<p>César Augusto Ramírez is a Peruvian artist based in France since 2022. His work sits at the intersection of the physical and the digital, where he interrogates the political tensions between images and the technologies that generate them. Through photography, installation, video, sculpture, and even fanzines, Ramírez questions the image itself as a narrative tool, its potential and limits as a visual medium, as well as its capacity to represent and reshape reality.</p>
+<a class="cv-link" href="/bio/">Read more →</a>
+</div>
+</section>
+<section class="section" id="works" style="padding-top:72px">
 <div class="section-head">
 <h2>Works</h2>
 </div>
 <div class="works">
-<article class="work" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="César Augusto Ramírez. All under heaven, 2026. Cyanotypes on 300g watercolor paper. 292 × 194 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. All under heaven, 2026. Cyanotypes on 300g watercolor paper. 292 × 194 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/1/all1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>All under heaven</em>, 2026</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">292 × 194 cm</span></div></article>
-<article class="work size-2x2" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="César Augusto Ramírez. Fleur de lys I and II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm each" class="work-img" role="img"><img alt="César Augusto Ramírez. Fleur de lys I and II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm each" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Fleur de lys I and II</em>, 2025</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">162 × 59 cm each</span></div></article>
-<article class="work size-2x1" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="César Augusto Ramírez. (detail) Fleur de lys II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) Fleur de lys II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) Fleur de lys II</em>, 2025</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">162 × 59 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Aestivanthus solis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Aestivanthus solis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano10.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Aestivanthus solis</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">14.7 × 21 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Luminoflora aurelis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Luminoflora aurelis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano11.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Luminoflora aurelis</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">14.7 × 21 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Calanthe bacchicus 10, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Calanthe bacchicus 10, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Calanthe bacchicus 10</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">29.7 × 21 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Calanthe bacchicus 8, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Calanthe bacchicus 8, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Calanthe bacchicus 8</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">29.7 × 21 cm</span></div></article>
-<article class="work size-2x2" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Branche en feu (Ephedra), 2025. Cyanotypes on 300g watercolor paper. 143 × 81 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Branche en feu (Ephedra), 2025. Cyanotypes on 300g watercolor paper. 143 × 81 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano5.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Branche en feu (Ephedra)</em>, 2025</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">143 × 81 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Musa elektra, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Musa elektra, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano6.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Musa elektra</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">29.7 × 21 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Studies on Peruvian flora (from the New World), 2023. Cyanotypes on watercolor paper. 124,8 × 90 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Studies on Peruvian flora (from the New World), 2023. Cyanotypes on watercolor paper. 124,8 × 90 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano9.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Studies on Peruvian flora (from the New World)</em>, 2023</div><span class="medium">Cyanotypes on watercolor paper</span><span class="dims">124,8 × 90 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano7.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>forget me not</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">28.1 × 21 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/2/ciano8.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>forget me not</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">28.1 × 21 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. The Enlightenment, 2023. 4K video made in Unreal Engine 5. 1 channel, 3 min 18 s." class="work-img" role="img"><img alt="César Augusto Ramírez. The Enlightenment, 2023. 4K video made in Unreal Engine 5. 1 channel, 3 min 18 s." loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/3/the1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>The Enlightenment</em>, 2023</div><span class="medium">4K video made in Unreal Engine 5</span><span class="dims">1 channel, 3 min 18 s.</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (10), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (10), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/4/trans1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (10)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (11), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (11), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/4/trans3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (11)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (12), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (12), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/4/trans2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (12)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (13), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (13), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/4/trans4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (13)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. OO, 2021. Photo Rag Baryta paper on acrylic plate. 25 × 25 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. OO, 2021. Photo Rag Baryta paper on acrylic plate. 25 × 25 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/4/trans5.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>OO</em>, 2021</div><span class="medium">Photo Rag Baryta paper on acrylic plate</span><span class="dims">25 × 25 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (verano), 2018. Photo Rag Baryta paper on glass plate. 30 × 30.5 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (verano), 2018. Photo Rag Baryta paper on glass plate. 30 × 30.5 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/4/trans6.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (verano)</em>, 2018</div><span class="medium">Photo Rag Baryta paper on glass plate</span><span class="dims">30 × 30.5 cm</span></div></article>
-<article class="work size-2x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (panorama), 2019. Polaroid emulsion on watercolor paper. 20 × 39 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (panorama), 2019. Polaroid emulsion on watercolor paper. 20 × 39 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/4/trans7.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (panorama)</em>, 2019</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">20 × 39 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/5/ens1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Seven reinterpretative essays on Peruvian reality</em>, 2019</div><span class="medium">UV print on wood panels</span><span class="dims">180 × 95 × 2 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. (detail) Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/5/ens2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) Seven reinterpretative essays on Peruvian reality</em>, 2019</div><span class="medium">UV print on wood panels</span><span class="dims">180 × 95 × 2 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. A farewell to arms (installation), 2019. Plinth. Photo book. Large-scale photo print. Variable dimensions" class="work-img" role="img"><img alt="César Augusto Ramírez. A farewell to arms (installation), 2019. Plinth. Photo book. Large-scale photo print. Variable dimensions" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/6/adios1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>A farewell to arms (installation)</em>, 2019</div><span class="medium">Plinth. Photo book. Large-scale photo print</span><span class="dims">Variable dimensions</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/6/adios2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>A farewell to arms (photo book)</em>, 2018</div><span class="medium">Photo book. Inkjet printing</span><span class="dims">21 × 29.7 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/6/adios3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) A farewell to arms (photo book)</em>, 2018</div><span class="medium">Photo book. Inkjet printing</span><span class="dims">21 × 29.7 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/6/adios4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) A farewell to arms (photo book)</em>, 2018</div><span class="medium">Photo book. Inkjet printing</span><span class="dims">21 × 29.7 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/7/fan1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/7/fan2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/7/fan3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/7/fan4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/7/fan5.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
-<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/7/fan6.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
-<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. You will never be alone, 2019. Four-panel display. Inkjet print. 120 × 120 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. You will never be alone, 2019. Four-panel display. Inkjet print. 120 × 120 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="images/8/nunca1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>You will never be alone</em>, 2019</div><span class="medium">Four-panel display. Inkjet print</span><span class="dims">120 × 120 cm</span></div></article>
+<article class="work" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="César Augusto Ramírez. All under heaven, 2026. Cyanotypes on 300g watercolor paper. 292 × 194 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. All under heaven, 2026. Cyanotypes on 300g watercolor paper. 292 × 194 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/1/all1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>All under heaven</em>, 2026</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">292 × 194 cm</span></div></article>
+<article class="work size-2x2" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="César Augusto Ramírez. Fleur de lys I and II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm each" class="work-img" role="img"><img alt="César Augusto Ramírez. Fleur de lys I and II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm each" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Fleur de lys I and II</em>, 2025</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">162 × 59 cm each</span></div></article>
+<article class="work size-2x1" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="César Augusto Ramírez. (detail) Fleur de lys II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) Fleur de lys II, 2025. Cyanotypes on 300g watercolor paper. 162 × 59 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) Fleur de lys II</em>, 2025</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">162 × 59 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Aestivanthus solis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Aestivanthus solis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano10.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Aestivanthus solis</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">14.7 × 21 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Luminoflora aurelis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Luminoflora aurelis, 2025. Cyanotype on 300g watercolor paper. 14.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano11.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Luminoflora aurelis</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">14.7 × 21 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Calanthe bacchicus 10, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Calanthe bacchicus 10, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Calanthe bacchicus 10</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">29.7 × 21 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Calanthe bacchicus 8, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Calanthe bacchicus 8, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Calanthe bacchicus 8</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">29.7 × 21 cm</span></div></article>
+<article class="work size-2x2" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Branche en feu (Ephedra), 2025. Cyanotypes on 300g watercolor paper. 143 × 81 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Branche en feu (Ephedra), 2025. Cyanotypes on 300g watercolor paper. 143 × 81 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano5.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Branche en feu (Ephedra)</em>, 2025</div><span class="medium">Cyanotypes on 300g watercolor paper</span><span class="dims">143 × 81 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Musa elektra, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Musa elektra, 2025. Cyanotype on 300g watercolor paper. 29.7 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano6.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Musa elektra</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">29.7 × 21 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Studies on Peruvian flora (from the New World), 2023. Cyanotypes on watercolor paper. 124,8 × 90 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Studies on Peruvian flora (from the New World), 2023. Cyanotypes on watercolor paper. 124,8 × 90 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano9.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Studies on Peruvian flora (from the New World)</em>, 2023</div><span class="medium">Cyanotypes on watercolor paper</span><span class="dims">124,8 × 90 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano7.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>forget me not</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">28.1 × 21 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. forget me not, 2025. Cyanotype on 300g watercolor paper. 28.1 × 21 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/2/ciano8.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>forget me not</em>, 2025</div><span class="medium">Cyanotype on 300g watercolor paper</span><span class="dims">28.1 × 21 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. The Enlightenment, 2023. 4K video made in Unreal Engine 5. 1 channel, 3 min 18 s." class="work-img" role="img"><img alt="César Augusto Ramírez. The Enlightenment, 2023. 4K video made in Unreal Engine 5. 1 channel, 3 min 18 s." loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/3/the1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>The Enlightenment</em>, 2023</div><span class="medium">4K video made in Unreal Engine 5</span><span class="dims">1 channel, 3 min 18 s.</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (10), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (10), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/4/trans1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (10)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (11), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (11), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/4/trans3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (11)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (12), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (12), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/4/trans2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (12)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (13), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (13), 2021. Polaroid emulsion on watercolor paper. 11.50 × 12 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/4/trans4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (13)</em>, 2021</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">11.50 × 12 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. OO, 2021. Photo Rag Baryta paper on acrylic plate. 25 × 25 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. OO, 2021. Photo Rag Baryta paper on acrylic plate. 25 × 25 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/4/trans5.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>OO</em>, 2021</div><span class="medium">Photo Rag Baryta paper on acrylic plate</span><span class="dims">25 × 25 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (verano), 2018. Photo Rag Baryta paper on glass plate. 30 × 30.5 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (verano), 2018. Photo Rag Baryta paper on glass plate. 30 × 30.5 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/4/trans6.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (verano)</em>, 2018</div><span class="medium">Photo Rag Baryta paper on glass plate</span><span class="dims">30 × 30.5 cm</span></div></article>
+<article class="work size-2x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. S/T (panorama), 2019. Polaroid emulsion on watercolor paper. 20 × 39 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. S/T (panorama), 2019. Polaroid emulsion on watercolor paper. 20 × 39 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/4/trans7.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>S/T (panorama)</em>, 2019</div><span class="medium">Polaroid emulsion on watercolor paper</span><span class="dims">20 × 39 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/5/ens1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>Seven reinterpretative essays on Peruvian reality</em>, 2019</div><span class="medium">UV print on wood panels</span><span class="dims">180 × 95 × 2 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. (detail) Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) Seven reinterpretative essays on Peruvian reality, 2019. UV print on wood panels. 180 × 95 × 2 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/5/ens2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) Seven reinterpretative essays on Peruvian reality</em>, 2019</div><span class="medium">UV print on wood panels</span><span class="dims">180 × 95 × 2 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. A farewell to arms (installation), 2019. Plinth. Photo book. Large-scale photo print. Variable dimensions" class="work-img" role="img"><img alt="César Augusto Ramírez. A farewell to arms (installation), 2019. Plinth. Photo book. Large-scale photo print. Variable dimensions" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/6/adios1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>A farewell to arms (installation)</em>, 2019</div><span class="medium">Plinth. Photo book. Large-scale photo print</span><span class="dims">Variable dimensions</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/6/adios2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>A farewell to arms (photo book)</em>, 2018</div><span class="medium">Photo book. Inkjet printing</span><span class="dims">21 × 29.7 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/6/adios3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) A farewell to arms (photo book)</em>, 2018</div><span class="medium">Photo book. Inkjet printing</span><span class="dims">21 × 29.7 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. (detail) A farewell to arms (photo book), 2018. Photo book. Inkjet printing. 21 × 29.7 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/6/adios4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>(detail) A farewell to arms (photo book)</em>, 2018</div><span class="medium">Photo book. Inkjet printing</span><span class="dims">21 × 29.7 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/7/fan1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/7/fan2.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/7/fan3.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/7/fan4.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/7/fan5.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
+<article class="work size-1x1" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. I don’t regret this love, 2021. Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies. 19.5 × 14 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/7/fan6.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>I don’t regret this love</em>, 2021</div><span class="medium">Fanzine. Risograph printed photographs on 90gr Bond paper. Edition of 50 numbered copies</span><span class="dims">19.5 × 14 cm</span></div></article>
+<article class="work" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="César Augusto Ramírez. You will never be alone, 2019. Four-panel display. Inkjet print. 120 × 120 cm" class="work-img" role="img"><img alt="César Augusto Ramírez. You will never be alone, 2019. Four-panel display. Inkjet print. 120 × 120 cm" loading="lazy" onload="this.closest('.work-img').style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" src="/images/8/nunca1.jpg"/></div><div class="work-meta"><span class="artist">César Augusto Ramírez</span><div class="title-line"><em>You will never be alone</em>, 2019</div><span class="medium">Four-panel display. Inkjet print</span><span class="dims">120 × 120 cm</span></div></article>
 </div>
 </section>
-<section class="section" id="installations">
-<div class="section-head">
-<h2>Installation views</h2>
-</div>
-<div class="install-grid">
-<div class="install-item" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="At hand · Galerie du Crous · Paris, France · 2026" class="install-img" role="img"><img alt="At hand · Galerie du Crous · Paris, France · 2026" loading="lazy" src="images/INSTALLATION VIEWS/in1.jpg"/></div><span class="cap">At hand · Galerie du Crous · Paris, France · 2026</span></div>
-<div class="install-item" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="At hand · Galerie du Crous · Paris, France · 2026" class="install-img" role="img"><img alt="At hand · Galerie du Crous · Paris, France · 2026" loading="lazy" src="images/INSTALLATION VIEWS/in2.jpg"/></div><span class="cap">At hand · Galerie du Crous · Paris, France · 2026</span></div>
-<div class="install-item" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="At hand · Galerie du Crous · Paris, France · 2026" class="install-img" role="img"><img alt="At hand · Galerie du Crous · Paris, France · 2026" loading="lazy" src="images/INSTALLATION VIEWS/in3.jpg"/></div><span class="cap">At hand · Galerie du Crous · Paris, France · 2026</span></div>
-<div class="install-item" data-copyright="© Clémence Purkat, Samuel Vorms / ADAGP, Paris 2026"><div aria-label="Entrez sans sonner · Galerie du Crous · Paris, France · 2025" class="install-img" role="img"><img alt="Entrez sans sonner · Galerie du Crous · Paris, France · 2025" loading="lazy" src="images/INSTALLATION VIEWS/in4.jpg"/></div><span class="cap">Entrez sans sonner · Galerie du Crous · Paris, France · 2025</span></div>
-<div class="install-item" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="Prix Michel Journiac · Galerie Michel Journiac · 2025" class="install-img" role="img"><img alt="Prix Michel Journiac · Galerie Michel Journiac · 2025" loading="lazy" src="images/INSTALLATION VIEWS/in5.jpg"/></div><span class="cap">Prix Michel Journiac · Galerie Michel Journiac · 2025</span></div>
-<div class="install-item" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="Prix Michel Journiac · Galerie Michel Journiac · 2025" class="install-img" role="img"><img alt="Prix Michel Journiac · Galerie Michel Journiac · 2025" loading="lazy" src="images/INSTALLATION VIEWS/in6.jpg"/></div><span class="cap">Prix Michel Journiac · Galerie Michel Journiac · 2025</span></div>
-<div class="install-item" data-copyright="© Juan Pablo Murrugarra / ADAGP Paris, 2026"><div aria-label="ICPNA Contemporary Art Prize · Lima, Peru · 2023" class="install-img" role="img"><img alt="ICPNA Contemporary Art Prize · Lima, Peru · 2023" loading="lazy" src="images/INSTALLATION VIEWS/in7.jpg"/></div><span class="cap">ICPNA Contemporary Art Prize · Lima, Peru · 2023</span></div>
-<div class="install-item" data-copyright="© Juan Pablo Murrugarra / ADAGP Paris, 2026"><div aria-label="ICPNA Contemporary Art Prize · Lima, Peru · 2022" class="install-img" role="img"><img alt="ICPNA Contemporary Art Prize · Lima, Peru · 2022" loading="lazy" src="images/INSTALLATION VIEWS/in8.jpg"/></div><span class="cap">ICPNA Contemporary Art Prize · Lima, Peru · 2022</span></div>
-<div class="install-item" data-copyright="© Alfredo Arévalo / ADAGP Paris, 2026"><div aria-label="Cooperative quest · Centro Cultural ZIL · 2024" class="install-img" role="img"><img alt="Cooperative quest · Centro Cultural ZIL · 2024" loading="lazy" src="images/INSTALLATION VIEWS/in9.jpg"/></div><span class="cap">Cooperative quest · Centro Cultural ZIL · 2024</span></div>
-<div class="install-item" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="Map to the stars · Alliance Française de Lima · Lima, Peru · 2022" class="install-img" role="img"><img alt="Map to the stars · Alliance Française de Lima · Lima, Peru · 2022" loading="lazy" src="images/INSTALLATION VIEWS/in10.jpg"/></div><span class="cap">Map to the stars · Alliance Française de Lima · Lima, Peru · 2022</span></div>
-<div class="install-item" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="ABLi Art Biennial in Lima · Monumental Callao · Callao, Peru · 2019" class="install-img" role="img"><img alt="ABLi Art Biennial in Lima · Monumental Callao · Callao, Peru · 2019" loading="lazy" src="images/INSTALLATION VIEWS/in11.jpg"/></div><span class="cap">ABLi Art Biennial in Lima · Monumental Callao · Callao, Peru · 2019</span></div>
-<div class="install-item" data-copyright="© Edi Hirose / ADAGP Paris, 2026"><div aria-label="Camera Lucida: New Peruvian Photography · MATE Museum · Lima, Peru · 2019" class="install-img" role="img"><img alt="Camera Lucida: New Peruvian Photography · MATE Museum · Lima, Peru · 2019" loading="lazy" src="images/INSTALLATION VIEWS/in12.jpg"/></div><span class="cap">Camera Lucida: New Peruvian Photography · MATE Museum · Lima, Peru · 2019</span></div>
-<div class="install-item" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="Camera Lucida: New Peruvian Photography · MATE Museum · Lima, Peru · 2019" class="install-img" role="img"><img alt="Camera Lucida: New Peruvian Photography · MATE Museum · Lima, Peru · 2019" loading="lazy" src="images/INSTALLATION VIEWS/in13.jpg"/></div><span class="cap">Camera Lucida: New Peruvian Photography · MATE Museum · Lima, Peru · 2019</span></div>
-<div class="install-item" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="Antes de que desaparezca · Espacio La Sala · Lima, Peru · 2019" class="install-img" role="img"><img alt="Antes de que desaparezca · Espacio La Sala · Lima, Peru · 2019" loading="lazy" src="images/INSTALLATION VIEWS/in14.jpg"/></div><span class="cap">Antes de que desaparezca · Espacio La Sala · Lima, Peru · 2019</span></div>
-<div class="install-item" data-copyright="© César Augusto Ramírez / ADAGP Paris, 2026"><div aria-label="The Others · Brazil-Peru Cultural Center · Lima, Peru · 2019" class="install-img" role="img"><img alt="The Others · Brazil-Peru Cultural Center · Lima, Peru · 2019" loading="lazy" src="images/INSTALLATION VIEWS/in15.JPG"/></div><span class="cap">The Others · Brazil-Peru Cultural Center · Lima, Peru · 2019</span></div>
-</div>
-</section>
-<section class="section" id="cv">
-<div class="section-head" style="margin-bottom:24px;">
-<h2>CV</h2>
-</div>
-<a class="more" href="CV web.pdf" rel="noopener" style="display: block; margin-bottom: 48px; border-bottom: none;" target="_blank">Download PDF →</a>
-<div class="cv-subsection">
-<h3 class="cv-subtitle">Upcoming</h3>
-<ul class="exhib-list">
-<li>
-<span class="year">2027</span>
-<span>
-<span class="title">Résidence Villa Albertine</span>
-<span class="venue">Villa Albertine · New York, EE.UU.</span>
-</span>
-<span class="tag">Artist residency</span>
-</li>
-<li>
-<span class="year">2027</span>
-<span>
-<span class="title">Solo show</span>
-<span class="venue">Peruvian Embassy in Paris · Paris, France</span>
-</span>
-<span class="tag">Solo show</span>
-</li>
-<li>
-<span class="year">2026</span>
-<span>
-<span class="title">(To be announced)</span>
-<span class="venue">Galerie Immanence · Paris, France</span>
-</span>
-<span class="tag">Group exhibition</span>
-</li>
-<li>
-<span class="year">2026</span>
-<span>
-<span class="title">VIDEO AKT International New Media Art Biennial</span>
-<span class="venue"> MAC Contemporary Art Museum · Lima, Peru</span>
-</span>
-<span class="tag">Group exhibition</span>
-</li>
-</ul>
-</div>
-<div class="cv-subsection">
-<h3 class="cv-subtitle">Past</h3>
-<ul class="exhib-list">
-<li>
-<span class="year">2026</span>
-<span>
-<span class="title">Residency La Générale Nord-Est</span>
-<span class="venue">La Générale Nord-Est · Paris, France</span>
-</span>
-<span class="tag">Artist residency</span>
-</li>
-<li>
-<span class="year">2026</span>
-<span>
-<span class="title">At hand</span>
-<span class="venue">Galerie du Crous de Paris · Paris, France</span>
-</span>
-<span class="tag">Group exhibition</span>
-</li>
-<li>
-<span class="year">2025</span>
-<span>
-<span class="title">Avatar reveal</span>
-<span class="venue">Galería Linda de La Artcenter</span>
-</span>
-<span class="tag">Group exhibition</span>
-</li>
-<li>
-<span class="year">2025</span>
-<span>
-<span class="title">Entrez sans sonner</span>
-<span class="venue">Galerie du Crous de Paris · Paris, France</span>
-</span>
-<span class="tag">Group exhibition</span>
-</li>
-<li>
-<span class="year">2025</span>
-<span>
-<span class="title">Prix Michel Journiac</span>
-<span class="venue">Galerie Michel Journiac · Paris, France</span>
-</span>
-<span class="tag">Group exhibition</span>
-</li>
-</ul>
-</div>
-</section>
-<section class="section" id="about">
-<div class="section-head">
-<h2>Bio</h2>
-</div>
-<div class="bio-wrap">
-<div class="bio-text bio">
-<p>César Augusto Ramírez is a Peruvian artist based in France since 2022. His work sits at the intersection of the physical and the digital, where he interrogates the political tensions between images and the technologies that generate them. Through photography, installation, video, sculpture, and even fanzines, Ramírez questions the image itself as a narrative tool, its potential and limits as a visual medium, as well as its capacity to represent and reshape reality.</p>
-<p>His early childhood in the Peruvian jungle greatly influenced his current practice around constructed nature and visual imaginaries.</p>
-<p>Ramírez was recently selected to join the 2027 class of Villa Albertine in the United States. As part of this program, he will undertake an artist residency in New York in April and May 2027</p>
-</div>
-<div class="bio-photo"><img src="images/portrait.jpg" alt="Portrait of César Augusto Ramírez"><span class="credit">© Clémence Purkat, 2026</span></div>
-</div>
-</section>
-<section class="section" id="press">
-<div class="section-head">
-<h2>Press</h2>
-</div>
-<div class="press-list">
-<a href="https://villa-albertine.org/wp-content/uploads/2026/06/Villa-Albertine-Residents-Trombinoscope-FR-2027.pdf" rel="noopener" target="_blank">2026 — Villa Albertine 2027 Résidents</a>
-<a href="https://www.lagenerale.fr/fr/projet/inventer-le-paradis-vers-une-ecologie-de-lalterite" rel="noopener" target="_blank">2026 — La Générale Nord-est — Vers une écologie de l'altérité</a>
-<a href="https://www.cnap.fr/annuaire/personne/cesar-augusto-ramirez" rel="noopener" target="_blank">2026 — CNAP — Centre National des Arts Plastiques</a>
-<a href="https://www.cnap.fr/hand" rel="noopener" target="_blank">2026 — CNAP — At hand</a>
-<a href="https://www.paris.fr/evenements/at-hand-a-la-galerie-du-crous-de-paris-105048" rel="noopener" target="_blank">2026 — Ville de Paris — At hand, Galerie du Crous</a>
-<a href="https://www.instagram.com/p/DT-oWEkAhUH/" rel="noopener" target="_blank">2026 — At hand - Galerie du Crous de Paris</a>
-<a href="https://www.arteinformado.com/galeria/cesar-augusto-ramirez/all-under-heaven-77507" rel="noopener" target="_blank">2026 — Arte Informado — All under heaven</a>
-<a href="https://artfacts.net/artist/cesar-augusto-ramirez" rel="noopener" target="_blank">2026 — artfacts.net — César Augusto Ramírez</a>
-<a href="https://galeriemicheljourniac.com/prix-michel-journiac-2025/" rel="noopener" target="_blank">2025 — Prix Michel Journiac</a>
-<a href="https://revistas.upc.edu.pe/index.php/fot/article/view/1991" rel="noopener" target="_blank">2024 — Revista UPC — Fotografía</a>
-<a href="https://cultural.icpna.edu.pe/portfolio_page/premio-icpna-arte-contemporaneo-2023/" rel="noopener" target="_blank">2023 — ICPNA — Premio de Arte Contemporáneo</a>
-<a href="https://cultural.icpna.edu.pe/wp-content/uploads/2023/03/ICPNA-PAC-2022-231222_compressed-1.pdf" rel="noopener" target="_blank">2022 — ICPNA — Catálogo Premio Arte Contemporáneo</a>
-<a href="https://latexmagazine.com/la-fotografia-interpersonal-e-intima-de-cesar-augusto-ramirez/" rel="noopener" target="_blank">2021 — Latex Magazine — La fotografía interpersonal e íntima</a>
-<a href="https://bienaldecusco.art/cesar-augusto-ramirez-siete-ensayos-de-reinterpretacion-de-la-realidad-peruana/" rel="noopener" target="_blank">2021 — Bienal de Cusco — Siete ensayos de reinterpretación de la realidad peruana</a>
-<a href="https://dearteenlinea.com/artistas/cesar-augusto-ramirez/" rel="noopener" target="_blank">2020 — De Arte en Línea — César Augusto Ramírez</a>
-<a href="https://elcomercio.pe/eldominical/jovenes-fotografos-peruanos-presentan-sus-trabajos-en-el-mate-noticia/" rel="noopener" target="_blank">2019 — El Comercio — Jóvenes fotógrafos peruanos en MATE</a>
-<a href="https://www.artsy.net/show/mate-camera-lucida-new-peruvian-photography" rel="noopener" target="_blank">2019 — Artsy — Camera Lucida: New Peruvian Photography</a>
-</div>
-</section>
-<section class="section" id="contact">
-<div class="section-head">
-<h2>Contact</h2>
-</div>
-<div class="contact-block">
-<div>
-<h3 class="serif">For studio visits, commissions <em>and</em> general enquiries.</h3>
-<a class="big-mail" href="mailto:cesar.ram95@gmail.com">cesar.ram95@gmail.com</a>
-</div>
-</div>
-</section>
-<div class="colofon">
-<span>© César Augusto Ramírez / ADAGP, Paris, 2026 · All images courtesy of the artist and the photographers</span>
-</div>
-</div>
 <div class="modal" id="imageModal">
 <div class="modal-overlay"></div>
 <button class="modal-nav modal-nav-prev" id="modalPrev">❮</button>
@@ -1368,44 +571,12 @@
 </div>
 <button class="modal-nav modal-nav-next" id="modalNext">❯</button>
 </div>
-</main>
+<script src="/lightbox.js"></script>
+<div class="colofon">
+<span>© César Augusto Ramírez / ADAGP, Paris, 2026 · All images courtesy of the artist and the photographers</span>
+</div>
+</div>
 <script>
-  const sections = ['works', 'installations', 'cv', 'about', 'press', 'contact'].map(id => document.getElementById(id));
-  const links = document.querySelectorAll('.sidebar nav a');
-
-  function onScroll() {
-    const y = window.scrollY + 120;
-    let current = 'works';
-    sections.forEach(s => { if (s && s.offsetTop <= y) current = s.id; });
-    links.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  links.forEach(a => a.addEventListener('click', e => {
-    const href = a.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      e.preventDefault();
-      const el = document.querySelector(href);
-      if (!el) return;
-
-      // Custom smooth scroll that re-calculates the target each frame
-      const startY = window.scrollY;
-      const startTime = performance.now();
-      const duration = 600;
-      const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-
-      function step(now) {
-        const progress = Math.min((now - startTime) / duration, 1);
-        const targetY = el.offsetTop - 40;
-        window.scrollTo(0, startY + (targetY - startY) * ease(progress));
-        if (progress < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    }
-  }));
-
   // Apply grid size classes immediately (no image load needed)
   document.querySelectorAll('.work-img').forEach((img, index) => {
     const work = img.closest('.work');
@@ -1417,137 +588,7 @@
     else if (patternIndex === 1) work.classList.add('size-1x2');
     else if (patternIndex === 4 || patternIndex === 5) work.classList.add('size-2x1');
   });
-
-
-
-  const modal = document.getElementById('imageModal');
-  const modalImage = document.getElementById('modalImage');
-  const modalCaption = document.getElementById('modalCaption');
-  const modalOverlay = document.querySelector('.modal-overlay');
-
-  function openModal(imageUrl, caption, copyright) {
-    modalImage.src = imageUrl;
-
-    modalCaption.textContent = caption;
-    const copyrightEl = document.getElementById('modalCopyright');
-    if (copyright) {
-      copyrightEl.textContent = copyright;
-      copyrightEl.style.display = 'block';
-    } else {
-      copyrightEl.textContent = '';
-      copyrightEl.style.display = 'none';
-    }
-    modal.classList.add('active');
-  }
-
-  function closeModal() {
-    modal.classList.remove('active');
-  }
-
-  modalOverlay.addEventListener('click', closeModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
-
-  function getImgUrl(el) {
-    const img = el.querySelector('img');
-    return img ? img.getAttribute('src') : (el.dataset.bg || null);
-  }
-
-  // Navigation functionality
-  let allImageElements = [];
-  let currentImageIndex = -1;
-
-  function collectAllImages() {
-    allImageElements = [];
-    // Collect work images
-    document.querySelectorAll('.work-img').forEach(img => {
-      allImageElements.push({type: 'work', element: img});
-    });
-    // Collect installation images
-    document.querySelectorAll('.install-img').forEach(img => {
-      allImageElements.push({type: 'install', element: img});
-    });
-  }
-
-  function openModalForElement(imgElement) {
-    collectAllImages();
-    currentImageIndex = allImageElements.findIndex(item => item.element === imgElement);
-    updateNavButtons();
-
-    if (imgElement.classList.contains('work-img')) {
-      const url = getImgUrl(imgElement);
-      if (url) {
-        const work = imgElement.closest('.work');
-        const meta = work.querySelector('.work-meta');
-        const artist = meta.querySelector('.artist').textContent.trim();
-        const title = meta.querySelector('.title-line').textContent.trim();
-        const medium = meta.querySelector('.medium').textContent.trim();
-        const dims = meta.querySelector('.dims').textContent.trim();
-        const caption = `${artist}\n${title}\n${medium}\n${dims}`;
-        const copyright = work.getAttribute('data-copyright');
-        openModal(url, caption, copyright);
-      }
-    } else if (imgElement.classList.contains('install-img')) {
-      const url = getImgUrl(imgElement);
-      if (url) {
-        const installItem = imgElement.closest('.install-item');
-        const caption = installItem.querySelector('.cap').textContent.trim();
-        const copyright = installItem.getAttribute('data-copyright');
-        openModal(url, caption, copyright);
-      }
-    }
-  }
-
-  function updateNavButtons() {
-    const prevBtn = document.getElementById('modalPrev');
-    const nextBtn = document.getElementById('modalNext');
-
-    if (currentImageIndex <= 0) {
-      prevBtn.classList.add('disabled');
-    } else {
-      prevBtn.classList.remove('disabled');
-    }
-
-    if (currentImageIndex >= allImageElements.length - 1) {
-      nextBtn.classList.add('disabled');
-    } else {
-      nextBtn.classList.remove('disabled');
-    }
-  }
-
-  document.getElementById('modalPrev').addEventListener('click', () => {
-    if (currentImageIndex > 0) {
-      currentImageIndex--;
-      openModalForElement(allImageElements[currentImageIndex].element);
-    }
-  });
-
-  document.getElementById('modalNext').addEventListener('click', () => {
-    if (currentImageIndex < allImageElements.length - 1) {
-      currentImageIndex++;
-      openModalForElement(allImageElements[currentImageIndex].element);
-    }
-  });
-
-  // Update click handlers to use new navigation system
-  document.querySelectorAll('.work-img').forEach(img => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', function(e) {
-      e.stopPropagation();
-      openModalForElement(this);
-    });
-  });
-
-  document.querySelectorAll('.install-img').forEach(img => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', function(e) {
-      e.stopPropagation();
-      openModalForElement(this);
-    });
-  });
-
 </script>
+</main>
 </body>
 </html>

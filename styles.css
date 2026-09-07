@@ -1,0 +1,639 @@
+:root {
+    --ink: #111;
+    --ink-2: #555;
+    --ink-3: #8a8a85;
+    --paper: #fbfaf7;
+    --paper-2: #f4f2ec;
+    --line: #e6e4df;
+    --sidebar-w: 260px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); }
+  body {
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: "Libre Baskerville", Georgia, serif; }
+
+  /* ─── Fixed left sidebar ─────────────────────── */
+  aside.sidebar {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: var(--sidebar-w);
+    padding: 40px 32px 32px;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+  }
+  .brand {
+    font-family: "Libre Baskerville", serif;
+    font-size: 17px; letter-spacing: 0.005em;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  .brand em {
+    display: block; font-style: italic;
+    font-size: 11px; color: var(--ink-2);
+    margin-top: 6px; letter-spacing: 0.04em;
+    font-family: "Inter", sans-serif;
+  }
+
+  .sidebar nav {
+    margin-top: 56px;
+    display: flex; flex-direction: column;
+    gap: 2px;
+  }
+  .sidebar nav a {
+    display: inline-block;
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 10px 0 8px 0;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease, padding-left .25s ease;
+  }
+  .sidebar nav a:hover { padding-left: 20px; border-bottom-color: var(--ink-3); }
+  .sidebar nav a.active { }
+
+  .sidebar .rule {
+    height: 1px; background: var(--line);
+    margin: 32px 0 20px;
+  }
+
+  .sidebar .now {
+    font-size: 10px; letter-spacing: 0.22em;
+    color: var(--ink-3); text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .sidebar .now-title {
+    font-family: "Libre Baskerville", serif;
+    font-style: italic; font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .sidebar .now-venue {
+    font-size: 12px; color: var(--ink-2);
+    line-height: 1.4;
+  }
+  .sidebar .now-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: #c24c1e; border-radius: 50%;
+    margin-right: 8px; vertical-align: middle;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .sidebar .foot {
+    margin-top: auto;
+    display: flex; justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+  }
+  .sidebar .foot .lang {
+    font-size: 11px; color: var(--ink-3);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .sidebar .foot .lang a { color: var(--ink-3); text-decoration: none; padding: 0 2px; }
+  .sidebar .foot .lang a.on { color: var(--ink); }
+  .sidebar .ig {
+    color: var(--ink);
+    display: inline-flex; align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    transition: background .2s, color .2s, border-color .2s;
+    margin-top: 48px;
+  }
+  .sidebar .ig:hover {
+    background: var(--ink); color: var(--paper);
+    border-color: var(--ink);
+  }
+  .sidebar .ig svg { width: 15px; height: 15px; }
+
+  /* ─── Main scrolling column ──────────────────── */
+  main {
+    margin-left: var(--sidebar-w);
+    min-height: 100vh;
+  }
+  .wrap { padding: 48px 64px 96px; max-width: 1400px; }
+
+  /* Eyebrow above the featured piece */
+  .hero-eyebrow {
+    display: flex; align-items: baseline; gap: 14px;
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--ink-2);
+    margin-bottom: 28px;
+  }
+  .hero-eyebrow .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #c24c1e; display: inline-block;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  /* Featured image */
+  .featured-img {
+    width: 100%; aspect-ratio: 16 / 9;
+    background: #d6d2c9;
+    background-image:
+      linear-gradient(135deg, rgba(0,0,0,0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at 30% 60%, #b8b0a0 0%, #d6d2c9 60%),
+      repeating-linear-gradient(92deg, rgba(0,0,0,0.015) 0 3px, transparent 3px 9px);
+    position: relative; overflow: hidden;
+  }
+  .featured-img::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.08) 100%);
+  }
+  .featured-img .placeholder-note {
+    position: absolute; left: 24px; top: 24px;
+    color: rgba(255,255,255,0.8);
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+  }
+  .featured-caption {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 48px;
+    padding-top: 20px;
+    font-size: 12px; color: var(--ink-2);
+    letter-spacing: 0.04em;
+  }
+  .featured-caption .title {
+    color: var(--ink); font-family: "Libre Baskerville", serif;
+    font-size: 14px; font-style: italic;
+  }
+  .featured-caption a {
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--ink); padding-bottom: 1px;
+    letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px;
+    justify-self: end;
+  }
+
+  /* ─── Section headers ──────────────────────────── */
+  .section { padding-top: 96px; }
+  .section-head {
+    display: flex; align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 24px; margin-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .section-head h2 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400; font-style: italic;
+    font-size: 30px; margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .section-head .num {
+    font-size: 10px; letter-spacing: 0.25em;
+    color: var(--ink-2); text-transform: uppercase;
+  }
+  .section-head .more {
+    font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink);
+    text-decoration: none;
+  }
+  .section-head .more:hover { color: var(--ink-2); }
+
+  /* ─── Works grid ───────────────────────────────── */
+  .works {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .work {
+    cursor: pointer;
+  }
+  .work.size-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .work.size-2x1 {
+    grid-column: span 2;
+  }
+  .work.size-1x2 {
+    grid-row: span 2;
+  }
+  .work-img {
+    width: 100%; aspect-ratio: 4/3;
+    background: var(--paper);
+    overflow: hidden; position: relative;
+    transition: transform .5s ease;
+  }
+  .work-img img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .work:hover .work-img { transform: translateY(-4px); }
+  .work-img.landscape { aspect-ratio: 5/4; }
+  .work-img::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at var(--px, 40%) var(--py, 60%), var(--c1, #cfcac0) 0%, var(--c2, #e5e2db) 70%),
+      repeating-linear-gradient(var(--ang, 135deg), rgba(0,0,0,0.02) 0 2px, transparent 2px 7px);
+    opacity: 0;
+  }
+  .work:nth-child(1) .work-img { --c1: #8a7a68; --c2: #c9bfa9; --px: 30%; --py: 40%; --ang: 160deg; }
+  .work:nth-child(2) .work-img { --c1: #adb5b2; --c2: #e3e5e1; --px: 60%; --py: 55%; --ang: 120deg; }
+  .work:nth-child(3) .work-img { --c1: #6e5b46; --c2: #a08a6c; --px: 45%; --py: 65%; --ang: 100deg; }
+  .work:nth-child(4) .work-img { --c1: #3c3831; --c2: #7a7265; --px: 50%; --py: 50%; --ang: 140deg; }
+  .work:nth-child(5) .work-img { --c1: #b89482; --c2: #e0c9bc; --px: 35%; --py: 45%; --ang: 110deg; }
+  .work:nth-child(6) .work-img { --c1: #687866; --c2: #b2bfae; --px: 55%; --py: 60%; --ang: 150deg; }
+
+  .work-meta {
+    padding-top: 14px;
+    display: block;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    letter-spacing: 0.02em;
+  }
+  .work-meta .artist {
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  .work-meta .title-line {
+    font-family: "Libre Baskerville", serif;
+    color: var(--ink);
+    font-size: 14px;
+    margin-top: 2px;
+  }
+  .work-meta .title-line em {
+    font-style: italic;
+  }
+  .work-meta .medium,
+  .work-meta .dims {
+    display: block;
+  }
+
+  /* ─── Installation views strip ─────────────────── */
+  .install-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
+  }
+  .install-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .install-item:hover .install-img {
+    transform: translateY(-4px);
+  }
+  .install-grid .install-img {
+    aspect-ratio: 4/3;
+    position: relative; overflow: hidden;
+    background: #d4cfc5;
+    transition: transform .5s ease;
+  }
+  .install-grid .install-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .install-grid .install-img::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at var(--px, 40%) var(--py, 60%), var(--c1) 0%, var(--c2) 70%);
+    opacity: 0;
+  }
+  .install-grid .cap {
+    font-family: "Libre Baskerville", serif;
+    font-size: 13px;
+    color: var(--ink);
+    font-style: italic;
+  }
+  .install-grid .install-img:nth-child(1) { --c1: #4a4238; --c2: #8a8075; }
+  .install-grid .install-img:nth-child(2) { --c1: #bfb2a0; --c2: #e8dfcc; }
+  .install-grid .install-img:nth-child(3) { --c1: #5f6a62; --c2: #a4aea6; }
+  .install-grid .install-img:nth-child(4) { --c1: #7a6e5e; --c2: #c0b8aa; }
+  .install-grid .install-img:nth-child(5) { --c1: #3d4a48; --c2: #7a8c88; }
+  .install-grid .install-img:nth-child(6) { --c1: #6b5c4a; --c2: #b0a08e; }
+  .install-grid .install-img:nth-child(7) { --c1: #505860; --c2: #929ea8; }
+
+  /* ─── CV list ──────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .exhib-list { margin: 0; padding: 0; list-style: none; }
+  .exhib-list li {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 20px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .exhib-list li:last-child { border-bottom: 1px solid var(--line); }
+  .exhib-list .year { font-size: 12px; color: var(--ink-2); letter-spacing: 0.06em; }
+  .exhib-list .title {
+    font-family: "Libre Baskerville", serif;
+    font-style: italic; font-size: 15px;
+  }
+  .exhib-list .venue {
+    display: block; font-family: "Inter", sans-serif;
+    font-style: normal; font-size: 12px;
+    color: var(--ink-2); margin-top: 4px;
+    letter-spacing: 0.02em;
+  }
+  .exhib-list .tag {
+    font-size: 10px; color: var(--ink-2);
+    letter-spacing: 0.16em; text-transform: uppercase;
+  }
+
+  .bio-wrap { display: flex; gap: 48px; align-items: flex-start; }
+  .bio-text { flex: 0 1 46ch; }
+  .bio-photo { flex: 0 0 240px; }
+  .bio-photo img { width: 100%; height: auto; display: block; }
+  .bio-photo .credit {
+    display: block; text-align: right;
+    font-family: "Libre Baskerville", serif;
+    font-style: italic; font-size: 9px;
+    color: var(--ink-2); margin-top: 6px;
+  }
+  @media (max-width: 700px) {
+    .bio-wrap { flex-direction: column; }
+    .bio-photo { flex: 0 0 auto; max-width: 240px; }
+  }
+  .bio p { margin: 0 0 18px; max-width: 46ch; text-align: justify; font-family: "Libre Baskerville", Georgia, serif; }
+  .bio .signature {
+    font-family: "Libre Baskerville", serif;
+    font-style: italic; font-size: 13px;
+    color: var(--ink-2); margin-top: 24px;
+  }
+  .bio a.cv-link {
+    display: inline-block; margin-top: 20px;
+    font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+  }
+
+  /* ─── Press section ───────────────────────────── */
+  .press-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 0 40px;
+  }
+  .press-list a {
+    font-size: 14px;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color .25s ease, color .25s ease;
+  }
+  .press-list a:hover {
+    border-bottom-color: var(--ink);
+    color: var(--ink-2);
+  }
+
+  /* ─── CV Section ──────────────────────────────── */
+  #cv > .more {
+    font-family: "Libre Baskerville", serif !important;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: underline;
+    color: var(--ink);
+  }
+  .cv-subtitle {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400; font-style: italic;
+    font-size: 20px; margin: 0 0 16px;
+    color: var(--ink);
+    padding-top: 12px;
+  }
+  .cv-subsection { margin-bottom: 16px; }
+  .cv-bio { max-width: 600px; margin-top: 64px; }
+
+  /* ─── Contact section ─────────────────────────── */
+  .contact-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    padding: 8px 0 40px;
+  }
+  .contact-block h3 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400; font-size: 26px;
+    margin: 0 0 12px;
+  }
+  .contact-block p { color: var(--ink-2); margin: 0 0 20px; max-width: 42ch; }
+  .contact-block a.big-mail {
+    display: inline-block;
+    font-family: "Libre Baskerville", serif;
+    font-style: italic; font-size: 22px;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--ink); padding-bottom: 4px;
+  }
+  .contact-block .col h4 {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--ink-2);
+    margin: 0 0 14px; font-weight: 500;
+  }
+  .contact-block .col a {
+    display: block; color: var(--ink);
+    text-decoration: none; padding: 3px 0; font-size: 13px;
+  }
+  .contact-block .col a:hover { color: var(--ink-2); }
+
+  /* ─── Footer tiny ─────────────────────────────── */
+  .colofon {
+    margin-top: 80px; padding-top: 28px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between;
+    font-size: 11px; color: var(--ink-3);
+    letter-spacing: 0.06em;
+  }
+
+  /* ─── Responsive ──────────────────────────────── */
+  @media (max-width: 900px) {
+    aside.sidebar {
+      position: relative;
+      width: 100%; height: auto;
+      padding: 24px;
+      border-right: 0; border-bottom: 1px solid var(--line);
+    }
+    .sidebar nav {
+      flex-direction: row; flex-wrap: wrap;
+      gap: 4px 14px; margin-top: 24px;
+      padding-right: 24px;
+    }
+    .sidebar nav a { padding: 6px 4px; font-size: 15px; }
+    .sidebar .rule, .sidebar .now { display: none; }
+    .sidebar .foot {
+      padding-top: 12px;
+      justify-content: center;
+      margin-top: 0;
+    }
+    .sidebar .ig {
+      margin-top: 0;
+    }
+    main { margin-left: 0; }
+    .wrap { padding: 24px; }
+    .section-head { border-bottom: none; }
+    .works {
+      display: flex !important;
+      grid-template-columns: unset !important;
+      gap: 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 12px;
+    }
+    .work {
+      flex: 0 0 80%;
+      scroll-snap-align: start;
+    }
+    .install-grid {
+      display: flex !important;
+      grid-template-columns: unset !important;
+      gap: 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 12px;
+    }
+    .install-grid .install-item {
+      flex: 0 0 85%;
+      scroll-snap-align: start;
+    }
+    .install-grid .install-img {
+      width: 100%;
+    }
+    .two-col, .contact-block { grid-template-columns: 1fr !important; gap: 24px; }
+    .featured-caption { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  /* ─── Modal lightbox ─────────────────────── */
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .modal.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .modal-content {
+    position: relative;
+    z-index: 1000;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .modal-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+  }
+
+  .modal-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  #modalCopyright {
+    font-size: 11px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-top: 12px !important;
+    white-space: normal !important;
+  }
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+  }
+  .modal-close:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  .modal-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+    letter-spacing: 2px;
+    z-index: 1001;
+  }
+  .modal-nav:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .modal-nav.disabled {
+    color: rgba(255, 255, 255, 0.15);
+    cursor: not-allowed;
+  }
+  .modal-nav.disabled:hover {
+    color: rgba(255, 255, 255, 0.15);
+  }
+  .modal-nav-prev {
+    left: 60px;
+  }
+  .modal-nav-next {
+    right: 60px;
+  }
+
+  @media (max-width: 768px) {
+    .modal-nav {
+      display: none;
+    }
+  }
