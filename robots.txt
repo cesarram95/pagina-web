@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cesaraugustoramirez.com/sitemap.xml
+Sitemap: https://cesaraugustoramirez.com/sitemap-images.xml
