@@ -491,31 +491,25 @@
     main { margin-left: 0; }
     .wrap { padding: 24px; }
     .section-head { border-bottom: none; }
+    /* Una sola columna: las obras se recorren bajando, no de lado.
+       El carrusel horizontal dejaba 31 de 33 obras fuera de la pantalla,
+       inalcanzables para un rastreador que solo desplaza verticalmente. */
     .works {
-      display: flex !important;
-      grid-template-columns: unset !important;
-      gap: 24px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 12px;
+      grid-template-columns: 1fr;
+      gap: 32px;
     }
-    .work {
-      flex: 0 0 80%;
-      scroll-snap-align: start;
+    /* Las clases de tamaño harían que una obra ocupase 2 columnas; en una
+       sola columna eso generaría una columna implícita y desbordamiento. */
+    .works .work.size-2x2,
+    .works .work.size-2x1,
+    .works .work.size-1x2,
+    .works .work.size-1x1 {
+      grid-column: auto;
+      grid-row: auto;
     }
     .install-grid {
-      display: flex !important;
-      grid-template-columns: unset !important;
-      gap: 24px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 12px;
-    }
-    .install-grid .install-item {
-      flex: 0 0 85%;
-      scroll-snap-align: start;
+      grid-template-columns: 1fr;
+      gap: 32px;
     }
     .install-grid .install-img {
       width: 100%;
