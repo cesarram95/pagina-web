@@ -489,6 +489,14 @@
     }
   ]
 }</script>
+<script id="legacy-hash">
+// Enlaces antiguos del sitio de una sola página (/#cv, /#press...) -> su página nueva
+(function(){
+  var map={'#installations':'/installations/','#cv':'/cv/','#about':'/bio/','#bio':'/bio/','#press':'/press/','#contact':'/contact/'};
+  var t=map[location.hash];
+  if(t) location.replace(t);
+})();
+</script>
 </head>
 <body>
 <aside class="sidebar">
