@@ -88,7 +88,18 @@
 <div class="contact-block">
 <div>
 <h3 class="serif">For studio visits, commissions <em>and</em> general enquiries.</h3>
-<a class="big-mail" href="mailto:cesar.ram95@gmail.com">cesar.ram95@gmail.com</a>
+<a class="big-mail" data-u="59mar.rasec" data-d="moc.liamg">cesar.ram95 [at] gmail.com</a>
+<script>
+  // El correo se arma en el navegador para que los robots de spam no lo lean en el código
+  (function(){
+    var a = document.querySelector('.big-mail[data-u]');
+    if (!a) return;
+    var r = function(s){ return s.split('').reverse().join(''); };
+    var m = r(a.getAttribute('data-u')) + '@' + r(a.getAttribute('data-d'));
+    a.href = 'mailto:' + m;
+    a.textContent = m;
+  })();
+</script>
 </div>
 </div>
 </section>
