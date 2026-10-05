@@ -1,0 +1,5 @@
+# Configuración local de Claude Code: no publicar
+.claude/
+
+# Archivos del sistema de macOS
+.DS_Store
